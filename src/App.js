@@ -1,11 +1,15 @@
-import logo from './logo.svg';
+//import logo from './logo.svg';
 import './App.css';
+import Header from './components/Header';
+import NavBar from './components/NavBar';
 
 function App() {
+  
+  
   return (
     <div>
-      <h1>Birreria "Como Dice el Dicho"</h1>
-      <p>Bienvenidos!</p>
+      <Header/>
+      <NavBar/>
     </div>
   );
 }
