@@ -10,7 +10,7 @@ const NavBar = () =>{
     let stilos ={
     display : "flex",
     listStyle : "none",
-    padding : "20px",
+    padding : "10px",
     backgroundColor :"#423737",
     border : "1px",
 }
@@ -24,7 +24,8 @@ const NavBar = () =>{
     let estilosA ={
         textDecoration:"none",
         color : "#f1b800",
-        fontSize : "25px",
+        fontSize : "27px",
+        fontFamily: "'Raleway', sans-serif",
     }
     
     return (

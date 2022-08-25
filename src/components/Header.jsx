@@ -9,20 +9,28 @@ const Header = () => {
         padding : "20px",
         textAling: "center",
         margin : "0px",
+        fontFamily: "'Aboreto', cursive",
         
        
     }
     
     let stiloIMG = {
-        width : "100px",
+        
+        
+
+    }
+    let stiloH1 = {
+        verticalAling : "middle",
         
 
     }
 
     return (
-        <header style = {estilo} className="d-flex justify-content-center">
-            <img  src={logo} style={stiloIMG} className="justify-content-start "/>
-            <h1 className="text-center" > Cervecería The Northman </h1>
+        <header style = {estilo} className="row">
+            <div className=" col-1">
+                <img  src={logo} style={stiloIMG} className="img-fluid"/>
+            </div>
+            <h1 className=" justify-content-center col-4 "  style={stiloH1}> Cervecería The Northman </h1>
         </header>
     )
 }
