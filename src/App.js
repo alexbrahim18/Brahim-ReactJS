@@ -2,7 +2,7 @@
 import './App.css';
 import Header from './components/Header';
 import NavBar from './components/NavBar';
-
+import Body from './components/Body';
 function App() {
   
   
@@ -10,6 +10,7 @@ function App() {
     <div>
       <Header/>
       <NavBar/>
+      <Body/>  
     </div>
   );
 }

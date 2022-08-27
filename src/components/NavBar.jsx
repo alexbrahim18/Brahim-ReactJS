@@ -13,6 +13,7 @@ const NavBar = () =>{
     padding : "10px",
     backgroundColor :"#423737",
     border : "1px",
+    margin : "0",
 }
 
     let estilosLI = {
