@@ -1,0 +1,14 @@
+.header{
+    color:#F1B800;
+    background-color: #333333;
+    padding : 20px;
+    text-align: center;
+    margin : 0px;
+    font-family: 'Aboreto', cursive;
+    align-items: center;   
+}
+
+.header h1{
+    vertical-align :center;
+    height: 50px;
+}

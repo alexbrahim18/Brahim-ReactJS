@@ -1,0 +1,16 @@
+.navbar {
+    display : flex;
+    padding : 10px;
+    background-color :#423737;
+    border : 1px;
+    margin : 0;
+    
+}
+
+
+    .nav-link {
+        text-decoration:none;
+        color : #f1b800;
+        font-size : 27px;
+        font-family: 'Raleway', sans-serif;
+    }
