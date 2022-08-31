@@ -11,7 +11,6 @@ function App() {
   return (
     <div>
       <Header/>
-      <NavBar/> 
       <ItemListContainer greeting= {productos} />
     </div>
   );
