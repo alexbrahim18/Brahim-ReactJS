@@ -10,22 +10,22 @@ const NavBar = () =>{
     
     return (
 
-<nav class="navbar navbar-expand-lg">
-  <div class="container-fluid">
+<nav className="navbar navbar-expand-lg">
+  <div className="container-fluid">
 
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link" aria-current="page" href="#">Inicio</a>
+    <div className="collapse navbar-collapse" id="navbarNav">
+      <ul className="navbar-nav">
+        <li className="nav-item">
+          <a className="nav-link" aria-current="page" href="#">Inicio</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Productos</a>
+        <li className="nav-item">
+          <a className="nav-link" href="#">Productos</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Locales</a>
+        <li className="nav-item">
+          <a className="nav-link" href="#">Locales</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link ">Nosotros</a>
+        <li className="nav-item">
+          <a className="nav-link ">Nosotros</a>
         </li>
       </ul>
     </div>
