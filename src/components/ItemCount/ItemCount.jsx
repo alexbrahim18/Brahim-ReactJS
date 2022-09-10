@@ -28,9 +28,9 @@ const ItemCount = ({stock,initial,onAdd}) =>{
     }
 
         return (
-            <div className="container py-5">
-                <div className="row">
-                    <div className="col-md-2">
+            <div className="container ">
+                <div className="col-5">
+                    <div className="counter">
                         <p className="text-center">Producto 1</p>
                         <div className="input-group">
                             <input type="button" className="btn btn-secondary" value="-" onClick={()=>{decremCantidad(cantidad - 1)}} />

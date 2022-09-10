@@ -1,13 +1,14 @@
 import React from "react";  
-import beer from '../../img/card.png'
-import "./CartWidget.css"
+import beer from '../../img/card.png';
 
 
 const CartWidget = () =>{
     return (
-        
-                <img className="carrito" src={beer} alt="Icon" />
-            
+                
+                <span className="material-symbols-outlined">
+                            shopping_cart
+                            </span>
+                 
     )
 }
 
