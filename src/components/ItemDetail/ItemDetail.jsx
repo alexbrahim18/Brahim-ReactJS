@@ -5,7 +5,7 @@ import "./ItemDetail.css";
 
 
 
-const ItemDetail= ({id,nombre,imagen,precio,descripcion}) =>{
+const ItemDetail= ({id,nombre,imagen,precio,descripcion,stock}) =>{
     return (
                 
     <div className="row detail  justify-content-center m-5">
@@ -15,7 +15,7 @@ const ItemDetail= ({id,nombre,imagen,precio,descripcion}) =>{
             <h4>${precio}</h4>
             <p><span className="material-symbols-outlined">credit_card</span> <b>24</b> Cuotas de <b></b></p>
             <p>{descripcion}</p>
-            <ItemCount/>
+            <ItemCount stock={stock} initial={1} onAdd={0}/>
         </div>
         
 

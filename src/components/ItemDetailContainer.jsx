@@ -37,7 +37,7 @@ const ItemDetailContainer= () =>{
                 
     <div className="row detailContainer">
 
-        <ItemDetail id={item.id} nombre={item.nombre} imagen={item.img} precio={item.precio} descripcion={item.descripcion}/> 
+        <ItemDetail id={item.id} nombre={item.nombre} imagen={item.img} precio={item.precio} descripcion={item.descripcion} stock={item.stock}/> 
     </div>
                  
     )

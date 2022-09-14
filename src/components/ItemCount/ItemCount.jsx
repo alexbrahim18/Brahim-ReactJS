@@ -31,7 +31,6 @@ const ItemCount = ({stock,initial,onAdd}) =>{
             <div className="container ">
                 <div className="col-5">
                     <div className="counter">
-                        <p className="text-center">Producto 1</p>
                         <div className="input-group">
                             <input type="button" className="btn btn-secondary" value="-" onClick={()=>{decremCantidad(cantidad - 1)}} />
                             <input type="text" className="form-control" value={cantidad} readOnly/>
