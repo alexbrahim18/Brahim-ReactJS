@@ -8,7 +8,7 @@ import "./ItemDetail.css";
 const ItemDetail= ({id,nombre,imagen,precio,descripcion}) =>{
     return (
                 
-    <div className="row detail  justify-content-center">
+    <div className="row detail  justify-content-center m-5">
         <img src={imagen} alt={nombre} className="col-5"/>
         <div key={id} className="col-5">
             <h3>Six Pack de {nombre}</h3>
