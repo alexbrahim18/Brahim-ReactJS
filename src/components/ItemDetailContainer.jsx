@@ -10,7 +10,6 @@ import {products} from "./Mock";
 const ItemDetailContainer= () =>{
     const [item,setItem] = useState({});
     const {id} = useParams();
-    console.log(id);
     
 
 
@@ -18,8 +17,7 @@ const ItemDetailContainer= () =>{
     useEffect(()=>{
         const getProduct = () =>
             new Promise((resolve,reject)=>{
-                 const product = products.find((i)=> i.id === parseInt(id)); 
-                    console.log(product)                
+                 const product = products.find((i)=> i.id === parseInt(id));                 
                  setTimeout(()=>{
                     resolve(product);
                 },2000);
@@ -37,7 +35,7 @@ const ItemDetailContainer= () =>{
                 
     <div className="row detailContainer">
 
-        <ItemDetail id={item.id} nombre={item.nombre} imagen={item.img} precio={item.precio} descripcion={item.descripcion} stock={item.stock}/> 
+        <ItemDetail item={item}/> 
     </div>
                  
     )

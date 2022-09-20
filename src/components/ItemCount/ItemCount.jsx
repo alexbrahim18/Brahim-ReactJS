@@ -4,14 +4,12 @@ import "./ItemCount.css";
 import { CartContext } from "../Context/Context";
 
 
-const ItemCount = ({stock,initial,onAdd}) =>{
+const ItemCount = (props) =>{
 
-    const {cart, setCart,} = useContext(CartContext);
-
-    const  [counter,setCounter] = useState(initial);
-    //const  [cantidad, setCantidad] = useState(initial);
-    const  [itemStock, setItemStock] = useState(stock);
-    //const  [itemAdd, setItemAdd] = useState(onAdd);
+    const { item} = props;
+    const {cart, setCart, addItem} = useContext(CartContext);
+    const  [counter, setCounter] = useState(props.initial);
+    const  [itemStock, setItemStock] = useState(props.stock);
 
     const decremCantidad = (valor) =>{
         if (valor > 0){
@@ -26,8 +24,9 @@ const ItemCount = ({stock,initial,onAdd}) =>{
 
     const agregProd = () =>{
         if (counter<= itemStock){
+            addItem(item , counter);
             setItemStock(itemStock - counter);
-            //setItemAdd(itemAdd+cantidad);
+            
         }
     }
 
@@ -43,7 +42,7 @@ const ItemCount = ({stock,initial,onAdd}) =>{
                         <div className="d-grid gap-2 py-3">
                             <input type="button" className="btn btn-warning" value="Agregar" onClick={()=> {agregProd()}} />
                         </div>
-                        {/* <p>Productos en el Carrito : {counter}</p> */}
+                        <p>Productos disponibles : {itemStock}</p>
                     </div>
                 </div>
             </div>

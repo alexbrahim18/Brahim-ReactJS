@@ -14,16 +14,18 @@ function App() {
   return (
     <div>
       
-        <Provider>
-          <BrowserRouter>
-          <Header/>
-          <Routes>
-            <Route extact path="/" element={<ItemListContainer />}/>
-            <Route extact path="/categoria/:condicion" element={<ItemListContainer />}/>
-            <Route extact path="/producto/:id" element={<ItemDetailContainer />}/>
-          </Routes>
-          </BrowserRouter>   
-        </Provider>
+        
+          <Provider>
+            <BrowserRouter>
+            <Header/>
+            <Routes>
+              <Route extact path="/" element={<ItemListContainer />}/>
+              <Route extact path="/categoria/:condicion" element={<ItemListContainer />}/>
+              <Route extact path="/producto/:id" element={<ItemDetailContainer />}/>
+            </Routes>
+            </BrowserRouter> 
+          </Provider>  
+        
     
     </div>
   );
