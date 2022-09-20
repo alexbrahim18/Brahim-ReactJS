@@ -1,29 +1,33 @@
 import React from "react";
-import { useState } from "react";
+import { useState, useContext } from "react";
 import "./ItemCount.css";
+import { CartContext } from "../Context/Context";
 
 
 const ItemCount = ({stock,initial,onAdd}) =>{
 
-    const  [cantidad, setCantidad] = useState(initial);
+    const {cart, setCart,} = useContext(CartContext);
+
+    const  [counter,setCounter] = useState(initial);
+    //const  [cantidad, setCantidad] = useState(initial);
     const  [itemStock, setItemStock] = useState(stock);
-    const  [itemAdd, setItemAdd] = useState(onAdd);
+    //const  [itemAdd, setItemAdd] = useState(onAdd);
 
     const decremCantidad = (valor) =>{
         if (valor > 0){
-            setCantidad(valor);
+            setCounter(valor);
         }
     }
     const incremCantidad = (valor) =>{
         if (valor <= itemStock){
-            setCantidad(valor);
+            setCounter(valor);
         }
     }
 
     const agregProd = () =>{
-        if (cantidad<= itemStock){
-            setItemStock(itemStock - cantidad);
-            setItemAdd(itemAdd+cantidad);
+        if (counter<= itemStock){
+            setItemStock(itemStock - counter);
+            //setItemAdd(itemAdd+cantidad);
         }
     }
 
@@ -32,14 +36,14 @@ const ItemCount = ({stock,initial,onAdd}) =>{
                 <div className="col-5">
                     <div className="counter">
                         <div className="input-group">
-                            <input type="button" className="btn btn-secondary" value="-" onClick={()=>{decremCantidad(cantidad - 1)}} />
-                            <input type="text" className="form-control" value={cantidad} readOnly/>
-                            <input type="button" className="btn btn-secondary" value="+" onClick={()=>{incremCantidad(cantidad + 1)}}  />
+                            <input type="button" className="btn btn-warning" value="-" onClick={()=>{decremCantidad(counter - 1)}} />
+                            <input type="text" className="form-control" value={counter} readOnly/>
+                            <input type="button" className="btn btn-warning" value="+" onClick={()=>{incremCantidad(counter + 1)}}  />
                         </div>
                         <div className="d-grid gap-2 py-3">
-                            <input type="button" className="btn btn-secondary" value="Agregar" onClick={()=> {agregProd()}} />
+                            <input type="button" className="btn btn-warning" value="Agregar" onClick={()=> {agregProd()}} />
                         </div>
-                        <p>Productos en el Carrito : {itemAdd}</p>
+                        {/* <p>Productos en el Carrito : {counter}</p> */}
                     </div>
                 </div>
             </div>

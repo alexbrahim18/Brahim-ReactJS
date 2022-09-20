@@ -43,9 +43,9 @@ const ItemListContainer = () =>{
   },[condicion]);
     
     return (
-        <div>
+        
           <ItemList items={items}/>
-        </div>
+        
     )
 
 
