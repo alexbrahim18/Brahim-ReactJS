@@ -3,11 +3,18 @@
     color :#F1B800;
     font-size: 16px;
     font-family: 'Raleway', sans-serif;
-    font-weight: 500;
+    font-weight: 800;
     
 }
 p{
     font-size: 16px;
     font-family: 'Raleway', sans-serif;
     font-weight: 800;
+}
+
+.remove{
+    background-color:#F1B800;
+    color :#423737;
+    
+    
 }

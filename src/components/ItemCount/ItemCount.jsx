@@ -7,7 +7,7 @@ import { CartContext } from "../Context/Context";
 const ItemCount = (props) =>{
 
     const { item} = props;
-    //const {cart, setCart, addItem} = useContext(CartContext);
+    const {cart, setCart, addItem, removeItem} = useContext(CartContext);
     const  [counter, setCounter] = useState(props.initial);
     const  [itemStock, setItemStock] = useState(props.stock);
 
@@ -41,6 +41,7 @@ const ItemCount = (props) =>{
                         </div>
                         <div className="d-grid gap-2 py-3">
                             <input type="button" className="btn btn-warning" value="Agregar" onClick={()=> {agregProd()}} />
+                            <input type="button " className="btn btn-danger remove" value="Remover" onClick={() =>removeItem(item.id)} readOnly />
                         </div>
                         <p>Productos disponibles : {itemStock}</p>
                     </div>
