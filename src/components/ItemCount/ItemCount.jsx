@@ -7,7 +7,7 @@ import { CartContext } from "../Context/Context";
 const ItemCount = (props) =>{
 
     const { item} = props;
-    const {cart, setCart, addItem} = useContext(CartContext);
+    //const {cart, setCart, addItem} = useContext(CartContext);
     const  [counter, setCounter] = useState(props.initial);
     const  [itemStock, setItemStock] = useState(props.stock);
 
@@ -24,7 +24,7 @@ const ItemCount = (props) =>{
 
     const agregProd = () =>{
         if (counter<= itemStock){
-            addItem(item , counter);
+            props.onAdd(item , counter);
             setItemStock(itemStock - counter);
             
         }
