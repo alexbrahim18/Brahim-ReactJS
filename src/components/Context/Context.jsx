@@ -30,6 +30,8 @@ const Provider = (props) => {
         setCart(filtrado);
 
     }
+    
+    
 
     const isInCart = (id) =>{
         return cart.some(item =>item.id === id);
