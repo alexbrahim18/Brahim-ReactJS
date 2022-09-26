@@ -2,6 +2,7 @@ import React from "react";
 import { useState, useContext } from "react";
 import "./ItemCount.css";
 import { CartContext } from "../Context/Context";
+import { Link } from "react-router-dom";
 
 
 const ItemCount = (props) =>{
@@ -42,6 +43,7 @@ const ItemCount = (props) =>{
                         <div className="d-grid gap-2 py-3">
                             <input type="button" className="btn btn-warning" value="Agregar" onClick={()=> {agregProd()}} />
                             <input type="button " className="btn btn-danger remove" value="Remover" onClick={() =>removeItem(item.id)} readOnly />
+                            <Link to="/cart"><input type="button" className="btn btn-warning" value="Terminar Compra"  /></Link>
                         </div>
                         <p>Productos disponibles : {itemStock}</p>
                     </div>

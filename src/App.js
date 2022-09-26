@@ -7,15 +7,12 @@ import ItemListContainer from './components/ItemListContainer';
 import ItemDetailContainer from './components/ItemDetailContainer';
 import AppCartContext from './components/Context/Context';
 import Provider  from './components/Context/Context';
-import Cart from './components/cart';
+import Cart from './components/Cart';
 
 
 function App() {
   
   return (
-    <div>
-      
-        
           <Provider>
             <BrowserRouter>
             <Header/>
@@ -27,9 +24,6 @@ function App() {
             </Routes>
             </BrowserRouter> 
           </Provider>  
-        
-    
-    </div>
   );
 }
 

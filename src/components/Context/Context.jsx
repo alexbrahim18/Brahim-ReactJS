@@ -31,18 +31,34 @@ const Provider = (props) => {
 
     }
     
+    const sumaTotal = ()=>{
+        const copia = [...cart];
+        let count = 0;
+        copia.forEach((producto) => {
+            count += (producto.cantidad*producto.precio);
+        });
+        return count;
+
+
+    };
+    
     
 
     const isInCart = (id) =>{
         return cart.some(item =>item.id === id);
     }
     const cartTotal = () => {
-        return cart.reduce((total , item) => {total += item.cantidad}, 0)
+        const copia = [...cart];
+        let count = 0;
+        copia.forEach((producto) => {
+            count = count + producto.cantidad;
+        });
+        return count;
     }
     
     return(
         
-            <CartContext.Provider value={{cart, addItem, clear,isInCart, cartTotal,removeItem}}>
+            <CartContext.Provider value={{cart, addItem, clear,isInCart, cartTotal,removeItem,sumaTotal}}>
                 {props.children}
             </CartContext.Provider>
         

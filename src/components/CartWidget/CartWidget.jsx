@@ -8,14 +8,17 @@ import { Link } from "react-router-dom";
 
 const CartWidget = () =>{
     
-    const {cart} = useContext(CartContext);
-    const [total, setTotal ] = useState(0);
-    useEffect(()=>{
-        let totalItems = cart.reduce((total , item) => total += item.cantidad, 0);
-        setTotal(totalItems);
-    },[cart] );
+    const {cart, cartTotal} = useContext(CartContext);
+    
+    let total = cartTotal();
+   
 
-
+    if(cart.length === 0){
+        return (
+            <div></div>
+        )
+    }
+    
     return (
         
             <Link to={"/cart"}>

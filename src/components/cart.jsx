@@ -1,30 +1,24 @@
 import React from "react";
 import { useContext } from "react";
+import CartDetail from "./CartDetail";
 import { CartContext } from "./Context/Context";
+import { Link } from "react-router-dom";
 
 
 const Cart = () =>{
 
-    const{cart,clear,removeItem,suma} = useContext(CartContext);
+    const {cart} = useContext(CartContext);
 
-
-
+    if (cart.length === 0){
+        return(
+                <div>
+                    <h2>No hay Productos en el Carrito</h2>
+                    <Link to="/"><input type="button " className="btn btn-success remove" value="Seguir Comprando"  readOnly /></Link >
+                </div>
+        )
+    }
     return(
-        <div>
-            {cart.map(item=>
-                <div className="d-flex  justify-content-center align-item-end">
-                    <img src={item.img} alt={item.nombre} width="300px" />
-                    <div className="d-flex flex-column justify-content-center">
-                        <p className="text-center">{item.nombre}</p>
-                        <p>Productos en el carrito: {item.cantidad}</p>
-                        
-                        <input type="button " className="btn btn-danger remove" value="Remover" onClick={() =>removeItem(item.id)} readOnly />
-                    </div>
-                </div> 
-                )}
-                <input type="button " className="btn btn-danger remove" value="Borrar Todo" onClick={() =>clear()} readOnly />
-
-        </div>
+       <CartDetail/>
     )
 }
 
