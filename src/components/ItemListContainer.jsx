@@ -3,7 +3,7 @@ import { useEffect } from "react";
 import { useState } from "react";
 import { useParams } from "react-router-dom";
 import ItemList from "./ItemList";
-import {products} from "./Mock";
+import {getFirestore, collection, getDocs,query,where} from "firebase/firestore";
 
 
 const ItemListContainer = () =>{
@@ -11,35 +11,32 @@ const ItemListContainer = () =>{
 
   const [items,setItems ] = useState([]);
   const {condicion} = useParams();
+  
+  
   useEffect(() => {
-    let categoria = "";
-
-    if(condicion === "promociones"){
-       categoria = "promo";
-    }
-    else if (condicion === "cervezas"){
-      categoria = "cervezas";
-    } else {
-      categoria = "todo";
-    }
-    
-    
-    
-    const promesa = new Promise ((resolve,reject)=>{
-      setTimeout(()=>{
-        resolve(products);
-      },2000);
-    });
-
-    promesa.then((respuesta)=>{
-      if(categoria === "todo"){
-        setItems(respuesta);
-      }else {
-        const array_prod = respuesta.filter(producto => producto.categoria === categoria);
-        setItems(array_prod);
-      }
-    
+    const db = getFirestore();
+    const dbCollection = collection(db,"items");
+    if(condicion){
+      const dbFilter = query(dbCollection, where("categoria","==", condicion))
+    getDocs(dbFilter).then((res)=>{
+      setItems(res.docs.map(product => ({id: product.id, ...product.data()})));
     })
+    }
+    else{
+      getDocs(dbCollection).then((res)=>{
+        setItems(res.docs.map(product => ({id: product.id, ...product.data()})));
+      })
+    }
+    
+    
+    
+    
+    
+    
+    
+
+
+
   },[condicion]);
     
     return (
