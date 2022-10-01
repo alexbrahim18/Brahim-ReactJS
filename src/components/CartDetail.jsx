@@ -11,7 +11,7 @@ const CartDetail = () =>{
     return(
         <div>
         {cart.map(item=>
-            <div className="d-flex  justify-content-center align-item-end">
+            <div className="d-flex  justify-content-center align-item-end" key={item.id}>
                 <img src={item.img} alt={item.nombre} width="300px" />
                 <div className="d-flex flex-column justify-content-center">
                     <p className="text-center">{item.nombre}</p>

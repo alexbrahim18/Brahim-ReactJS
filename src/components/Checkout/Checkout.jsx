@@ -32,43 +32,44 @@ const Checkout = () =>{
             const db = getFirestore();
             const orderCollection =  collection(db, "orders");
             addDoc(orderCollection, order).then(({id}) => {
+                
                 setOrderId(id);
                 clear();
             });
         }
     }
-
     return(
         
         <div>
-            {cart > 0 ? 
+            {sumaTotal() > 0 ? 
             <div className="row d-flex justify-content-around">
             <form  className="col-4 m-5">
-                    <div class="mb-3">
+                    <div className="mb-3">
                         <input type="text" className="form-control" id="nombre"  placeholder="Ingrese su Nombre" onInput={(e) => setNombre(e.target.value)}/>
                     </div>
-                    <div class="mb-3">
+                    <div className="mb-3">
                         <input type="email" className="form-control" id="email"  placeholder="Ingrese su Email" onInput={(e) => setEmail(e.target.value)}/>
                     </div>
                     <div className="mb-3">
                         <input type="text" className="form-control" id="telefono"  placeholder="Ingrese su Telefono" onInput={(e) => setTelefono(e.target.value)}/>
                     </div>
-                    <button type="submit" className="btn btn-warning" onClick={() => {sendOrder()}}>Finalizar</button>
+                    <button type="button" className="btn btn-warning" onClick={() => {sendOrder()}}>Finalizar</button>
             </form>
             <div className="col-5">
-                {cart.map(item => <div className="d-flex  justify-content-around align-items-center">
+                {cart.map(item => <div className="d-flex  justify-content-around align-items-center" key={item.id}>
                 <img src={item.img} alt={item.nombre} width="200px" />
                 <div className="d-flex flex-column justify-content-center">
                     <p className="text-center">{item.nombre} x {item.cantidad}</p>
                     <p>Sub Total : ${ item.precio * item.cantidad}</p>
                 </div>
-                <button type="button" class="btn btn-danger trash" onClick={()=> removeItem(item.id)}><span class="material-symbols-outlined">delete</span></button>
+                <button type="button" class="btn btn-danger trash" onClick={()=> removeItem(item.id)}><span className="material-symbols-outlined">delete</span></button>
             </div> )}
             <p className="text-center fs-3 total">Total : ${total}</p>
             </div>
             </div> 
-            : orderId !== "" ? <Success id={orderId} /> : <div className="d-flex flex-column justify-content-center align-items-center"><div className="alert alert-danger text-center m-5" role="alert">No se encontraron Productos!</div><Link to="/"><input type="button " className="btn btn-success remove" value="Volver a la Tienda"  readOnly /></Link >
-        </div>}
+            : orderId !== "" ? <Success id={orderId} /> 
+            : <div className="d-flex flex-column justify-content-center align-items-center"><div className="alert alert-danger text-center m-5" role="alert">No se encontraron Productos!</div><Link to="/"><input type="button " className="btn btn-success remove" value="Volver a la Tienda"  readOnly /></Link ></div>
+        }
             
         </div>
         
