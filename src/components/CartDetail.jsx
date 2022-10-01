@@ -23,7 +23,7 @@ const CartDetail = () =>{
             )}
             <input type="button " className="btn btn-danger remove" value="Borrar Todo" onClick={() =>clear()} readOnly />
             <Link to="/"><input type="button " className="btn btn-success remove" value="Seguir Comprando"  readOnly /></Link >
-            <input type="button " className="btn btn-dark remove" value="Finaliza Compra" readOnly />
+            <Link to="/checkout"><input type="button " className="btn btn-dark remove" value="Finaliza Compra" readOnly /></Link>
             <p className="fs-3">Total : ${total}</p>
 
     </div>
