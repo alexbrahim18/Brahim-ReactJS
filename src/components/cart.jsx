@@ -11,10 +11,10 @@ const Cart = () =>{
 
     if (cart.length === 0){
         return(
-                <div>
-                    <h2>No hay Productos en el Carrito</h2>
-                    <Link to="/"><input type="button " className="btn btn-success remove" value="Seguir Comprando"  readOnly /></Link >
-                </div>
+            <div className="d-flex flex-column justify-content-center align-items-center">
+                <div className="alert alert-danger text-center m-5" role="alert">No se encontraron Productos!</div>
+                <Link to="/"><input type="button " className="btn btn-success remove" value="Volver a la Tienda"  readOnly /></Link >
+            </div>
         )
     }
     return(

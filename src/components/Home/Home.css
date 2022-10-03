@@ -1,0 +1,13 @@
+.home__texto{
+    margin-top: 10px;
+    color: #f1b800;
+    background-color: #423742;
+}
+
+.home__img{
+    height: 738px;
+    width: 640px;
+}
+a{
+    text-decoration: none;
+}

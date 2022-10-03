@@ -8,6 +8,8 @@ import ItemDetailContainer from './components/ItemDetailContainer';
 import Provider  from './components/Context/Context';
 import Cart from './components/Cart';
 import Checkout from './components/Checkout/Checkout';
+import Home from './components/Home/Home';
+import Contacto from './components/Contacto/Contacto';
 
 
 function App() {
@@ -17,11 +19,13 @@ function App() {
             <BrowserRouter>
             <Header/>
             <Routes>
-              <Route extact path="/" element={<ItemListContainer />}/>
+              <Route extact path="/" element={<Home />}/>
+              <Route extact path="/tienda" element={<ItemListContainer />}/>
               <Route extact path="/categoria/:condicion" element={<ItemListContainer />}/>
               <Route extact path="/producto/:id" element={<ItemDetailContainer />}/>
               <Route extact path='/cart' element={<Cart/>}/>
               <Route extact path='/checkout' element={<Checkout/>}/>
+              <Route extact path='/contacto' element={<Contacto/>}/>
             </Routes>
             </BrowserRouter> 
           </Provider>  

@@ -10,3 +10,5 @@ Desafio CartView : Cree el componente Cart y CartDetail, el primero a traves de 
 Ademas en Context defini las funciones de sumaTotal y cartTotal, que devuelven el total de la compra y la cantidad de productos en el carrito respectivamente.
 
 Desafio ItemCollection : Cree mi base de datos en cloud firestore, pasando todos los datos del mock de items a la collection de firestore. Cambie la logica de las categorias de los productos para que se adapte a la nueva manera de consultar los datos. Tambien borre las async promises como pedia la consigna.
+
+Desafio ItemColecction II : Cree el componente Checkout, que se muestra al final del proceso de eleccion de productos, que contiene un form para captar los datos del comprador y un detalle de la compra, donde se pueden eliminar productos y ver el total de la compra, esto se conecta con la firestore, creando una coleccion llamada orders, que contiene los datos del comprador, de la compra, la fecha y hora. Ademas implemente cambios esteticos y correciones de entregas anteriores.
