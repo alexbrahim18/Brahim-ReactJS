@@ -10,6 +10,7 @@ import Cart from './components/Cart';
 import Checkout from './components/Checkout/Checkout';
 import Home from './components/Home/Home';
 import Contacto from './components/Contacto/Contacto';
+import Footer from './components/Footer/Footer';
 
 
 function App() {
@@ -27,6 +28,7 @@ function App() {
               <Route extact path='/checkout' element={<Checkout/>}/>
               <Route extact path='/contacto' element={<Contacto/>}/>
             </Routes>
+            <Footer/>
             </BrowserRouter> 
           </Provider>  
   );

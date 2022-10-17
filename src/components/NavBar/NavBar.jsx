@@ -5,6 +5,7 @@ import "./NavBar.css";
 
 
 const NavBar = () =>{
+  
     
 
   
@@ -24,6 +25,9 @@ const NavBar = () =>{
         </li>
         <li className="nav-item">
           <Link  className="nav-link" to={"/categoria/promociones"}>Promociones</Link>
+        </li>
+        <li className="nav-item">
+          <Link  className="nav-link" to={"/contacto"}>Contacto</Link>
         </li>
       </ul>
     </div>
