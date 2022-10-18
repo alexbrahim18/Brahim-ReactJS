@@ -1,4 +1,4 @@
-import React, { Children } from "react";
+import React from "react";
 import { useState } from "react";
 import { createContext } from "react";
 
@@ -13,7 +13,7 @@ const Provider = (props) => {
     const addItem = (item , cantidad) =>{
         if(isInCart(item.id)){
             let producto = cart.find(x => x.id === item.id);
-            cart [cart.indexOf(producto)].cantidad += 1;
+            cart[cart.indexOf(producto)].cantidad += 1;
             setCart([...cart]);
             console.log(cart);
         }else {

@@ -7,8 +7,8 @@ import { Link } from "react-router-dom";
 
 const ItemCount = (props) =>{
 
-    const { item} = props;
-    const {cart, setCart, addItem, removeItem} = useContext(CartContext);
+    const {item} = props;
+    const {removeItem} = useContext(CartContext);
     const  [counter, setCounter] = useState(props.initial);
     const  [itemStock, setItemStock] = useState(props.stock);
 
