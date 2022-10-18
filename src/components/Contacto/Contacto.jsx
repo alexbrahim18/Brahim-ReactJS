@@ -2,7 +2,7 @@ import { addDoc, collection, getFirestore } from "firebase/firestore";
 import React from "react";
 import { useState } from "react";
 import "./Contacto.css"
-
+import swal from "sweetalert";
 
 const Contacto = () =>{
     const [nombre, setNombre] = useState("");
@@ -25,6 +25,14 @@ const Contacto = () =>{
                 setSuggesId(id);
                 console.log(suggesId);
             })
+        }
+        else{
+            swal({
+                title: "Hay campos vacios!",
+                text: "Complete los campos para continuar!",
+                icon: "error",
+                button: "continuar",
+              });
         }
 
     }

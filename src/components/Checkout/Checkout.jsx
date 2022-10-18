@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 import { getFirestore,collection,addDoc } from "firebase/firestore";
 import Success from "../Success";
+import swal from "sweetalert";
 
 
 const Checkout = () =>{
@@ -36,6 +37,14 @@ const Checkout = () =>{
                 setOrderId(id);
                 clear();
             });
+        }
+        else{
+            swal({
+                title: "Faltan Datos!",
+                text: "Necesitamos sus datos para enviar su pedido!",
+                icon: "error",
+                button: "Continuar",
+              });
         }
     }
     return(
