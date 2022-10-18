@@ -4,6 +4,12 @@
     padding: 15px;
 }
 
-.foot_info{
-    
+.foot__info h3{
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+    color: #423737;
+}
+
+.foot{
+    background-color: rgba(9,91,100,0.1);
 }

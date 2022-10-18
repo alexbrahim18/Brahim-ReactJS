@@ -62,7 +62,7 @@ const Checkout = () =>{
                     <p className="text-center">{item.nombre} x {item.cantidad}</p>
                     <p>Sub Total : ${ item.precio * item.cantidad}</p>
                 </div>
-                <button type="button" class="btn btn-danger trash" onClick={()=> removeItem(item.id)}><span className="material-symbols-outlined">delete</span></button>
+                <button type="button" className="btn btn-danger trash" onClick={()=> removeItem(item.id)}><span className="material-symbols-outlined">delete</span></button>
             </div> )}
             <p className="text-center fs-3 total">Total : ${total}</p>
             </div>
