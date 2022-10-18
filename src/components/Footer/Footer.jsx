@@ -1,13 +1,13 @@
 import React from "react";
-import tarjeta1 from "../../img/visa@2x.png";
-import tarjeta2 from "../../img/tarjeta-naranja@2x.png";
-import tarjeta3 from "../../img/rapipago@2x.png";
-import tarjeta4 from "../../img/mercadopago@2x.png";
-import tarjeta5 from "../../img/mastercard@2x.png";
-import tarjeta6 from "../../img/amex@2x.png";
-import envio1 from "../../img/oca@2x.png";
-import envio2 from "../../img/correo@2x.png";
-import envio3 from "../../img/andreani@2x.png";
+import tarjeta1 from "../img/visa@2x.png";
+import tarjeta2 from "../img/tarjeta-naranja@2x.png";
+import tarjeta3 from "../img/rapipago@2x.png";
+import tarjeta4 from "../img/mercadopago@2x.png";
+import tarjeta5 from "../img/mastercard@2x.png";
+import tarjeta6 from "../img/amex@2x.png";
+import envio1 from "../img/oca@2x.png";
+import envio2 from "../img/correo@2x.png";
+import envio3 from "../img/andreani@2x.png";
 import "./Footer.css"
 
 
